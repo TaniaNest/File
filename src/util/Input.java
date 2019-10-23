@@ -18,8 +18,16 @@ public class Input {
     }
 
     public int getChose() {
+        try {
+            return scanner.nextInt();
+        } catch (InputMismatchException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return 0;
+    }
 
-        return scanner.nextInt();
+    public String getAnswer() {
+        return scanner.next();
     }
 
 }
